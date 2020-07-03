@@ -14,7 +14,8 @@ tags: [Web, JSP, Java]
         웹 서버와 클라이언트는 이 프로토콜을 이용해 정보를 주고받는다.
         + **HTML** : Hyper Text Markup Language의 약자로, www 서비스를 제공하기 위한 표준 언어
         + **Javascript** : HTML 웹 페이지의 여러 가지 동적인 기능을 제공하는 스크립트 언어
-        + **CSS(Style Sheet)** : HTML 문서에서 서체나 색상, 정렬 등 세부적인 HTML 페이지의 디자인에 관련된 여러 가지 기능을 제공한다.
+        + **CSS(Style Sheet)** : HTML 문서에서 서체나 색상, 정렬 등 세부적인 HTML 페이지의 디자인에 관련된 여러 가지 기능을 제공한다.   
+        
         
 # 정적 웹 프로그래밍(static web programming)
 ![static_web](https://user-images.githubusercontent.com/43199318/86431241-3c3d8a00-bd2f-11ea-9041-933c45cc31c1.png "정적 웹")
@@ -24,7 +25,8 @@ tags: [Web, JSP, Java]
    - 즉, 사용자는 페이지가 변경되지 않는 한 고정된 웹 페이지를 보게 된다.(실시간으로 변하는 정보 표시 못한다.)
    - 특징
         + 사용자에게 화면 디자인 같은 고정된 정보만 제공한다.
-        + 정보 수정시 관리자가 직접 HTML 소스를 수정하여 사용자에게 정보를 제공해야한다.
+        + 정보 수정시 관리자가 직접 HTML 소스를 수정하여 사용자에게 정보를 제공해야한다.   
+        
         
 # 동적 웹 프로그래밍(dynamic web programming)
 ![dynamic_web](https://user-images.githubusercontent.com/43199318/86431206-1d3ef800-bd2f-11ea-815b-db0b3e6e7351.png "동적 웹")
@@ -38,7 +40,8 @@ tags: [Web, JSP, Java]
             * 서버의 부하가 심하다.
         + CGI 방식은 웹 애플리케이션 서버에서 실행되는 기능들이 모두 **프로세스(process)** 방식으로 실행된다.
         + 그래서, 어떤 기능을 수행하더라도 처음부터 메모리에 해당 기능을 로드(load)하고 수행한다. 그래서 과부하가 크다.
-   - 이러한 CGI의 문제점을 개선하여 나온 것이 JSP, ASP, PHP와 같은 동적 웹 프로그래밍 기술들이다.
+   - 이러한 CGI의 문제점을 개선하여 나온 것이 JSP, ASP, PHP와 같은 동적 웹 프로그래밍 기술들이다.   
+   
    
 # JSP 프로그램의 특징
    - JSP는 기본적으로 **스레드(Thread)** 방식으로 실행한다. 그래서 CGI 방식보다는 효율적으로 기능을 수행할 수 있다.
