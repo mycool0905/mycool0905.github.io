@@ -12,7 +12,7 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  avatar: "/assets/images/portfolio.jpg"
+  avatar: "/assets/images/portfolio.png"
   name: 김완기
   tagline: BE Developer
   date_format: "%b %-d, %Y"
