@@ -17,7 +17,7 @@ tags: [Web, JSP, Java]
         + **CSS(Style Sheet)** : HTML 문서에서 서체나 색상, 정렬 등 세부적인 HTML 페이지의 디자인에 관련된 여러 가지 기능을 제공한다.
         
 # 정적 웹 프로그래밍(static web programming)
-![Alt text](../assets/images/static_web.png "정적 웹")
+![static_web](https://user-images.githubusercontent.com/43199318/86431241-3c3d8a00-bd2f-11ea-9041-933c45cc31c1.png "정적 웹")
    - 아파치(Apache) 같은 웹 서버를 이용해서 웹 페이지들을 브라우저에 표시하는 방식.
    - 정적 웹 프로그래밍은 웹 서버에 미리 보여줄 HTML 페이지, CSS, 이미지, javascript 파일을 저장해 놓고
     브라우저에서 요청할 경우 그대로 전달하는 방식이다.
@@ -27,7 +27,7 @@ tags: [Web, JSP, Java]
         + 정보 수정시 관리자가 직접 HTML 소스를 수정하여 사용자에게 정보를 제공해야한다.
         
 # 동적 웹 프로그래밍(dynamic web programming)
-![Alt text](../assets/images/dynamic_web.png "동적 웹")
+![dynamic_web](https://user-images.githubusercontent.com/43199318/86431206-1d3ef800-bd2f-11ea-815b-db0b3e6e7351.png "동적 웹")
    - 정적 웹 프로그래밍에서 관리자가 HTML 소스를 직접 수정했어야 했는데, 이것을 웹 애플리케이션 서버가 수행하도록 한 것이다.
    - 따라서 데이터베이스에 정보를 저장해놓고, 클라이언트의 요청이 있을 때마다 데이터베이스에 접근하여 실시간 정보를 클라이언트에게 제공할 수 있다.
    - 처음에 동적인 방식으로 프로그램을 제공하는 기능은 **CGI(Common Gate Interface)** 였다.
