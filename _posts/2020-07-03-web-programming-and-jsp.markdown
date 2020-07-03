@@ -3,6 +3,7 @@ layout: post
 title:  "[Web] 웹 프로그래밍과 JSP"
 date:  2020-07-03 11:55:59 +0900
 categories: Java JSP
+tags: [Web, JSP, Java]
 ---
 
 # 웹 프로그래밍의 기본
