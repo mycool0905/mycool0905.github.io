@@ -165,6 +165,7 @@ public class ResponseServlet extends HttpServlet{
         * 전송 데이터 용량이 크다.
         * 전송 시 서블릿에서는 또 다시 가져오는 작업을 해야 하므로 처리속도가 GET보다 느리다.
         * 서블릿에서는 doPost()를 이용하여 처리한다.
+        
 <br>
 ------------------------------------------------------------------------------
 참고 : [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")
