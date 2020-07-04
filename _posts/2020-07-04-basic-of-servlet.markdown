@@ -117,10 +117,9 @@ public class LoginServlet extends HttpServlet{
 #서블릿의 응답 처리 방법
 1. doGet()이나 doPost() 메서드 안에서 처리
 2. javax.servlet.http.HttpServletResponse 객체를 이용
-3. setContentType()을 이용해 클라이언트에게 전송할 데이터 종류(MIME-TYPE)를 지정
+3. setContentType()을 이용해 클라이언트에게 전송할 데이터 종류( [MIME-TYPE](https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types) )를 지정
 4. 클라이언트(웹 브라우저)와 서블릿의 통신은 자바 I/O의 스트림을 이용
 
-- [MIME-TYPE](https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
 
 ResponseServlet.java
 ```java
