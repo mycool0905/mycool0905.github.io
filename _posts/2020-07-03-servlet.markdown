@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Web] 서블릿"
+title:  "[JSP/Servlet] 서블릿"
 date:  2020-07-03 17:55:59 +0900
 categories: Web Java Servlet JSP
 tags: [Web, JSP, Servlet, Java]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Web] 웹 프로그래밍과 JSP"
+title:  "[JSP/Servlet] 웹 프로그래밍과 JSP"
 date:  2020-07-03 11:55:59 +0900
 categories: Web Java Servlet JSP
 tags: [Web, JSP, Servlet, Java]
