@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[JSP/Servlet] 서블릿 비지니스 로직 처리"
-date:  2020-07-04 20:55:59 +0900
+date:  2020-07-10 10:02:59 +0900
 categories: Web Java Servlet JSP
 tags: [Web, JSP, Servlet, Java]
 ---
