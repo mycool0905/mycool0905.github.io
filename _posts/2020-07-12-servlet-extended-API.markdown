@@ -39,7 +39,7 @@ tags: [Web, JSP, Servlet, Java]
         dis.forward(request,response);
 
 
-- Redirect를 이용한 포워딩
+Redirect를 이용한 포워딩
 ![servlet-forward-sendRedirect](https://user-images.githubusercontent.com/43199318/87244718-34da5700-c47a-11ea-912a-a80312e26eb3.png)
 1. 클라이언트의 웹 브라우저에서 첫 번째 서블릿에 요청한다.
 2. 첫 번째 서블릿은 sendRedirect() 메서드를 이용해 두 번째 서블릿을 웹 브라우저를 통해서 요청한다.
@@ -66,7 +66,7 @@ public class FirstServlet extends HttpServlet {
 }
 ```
 
-- Refresh를 이용한 포워딩
+Refresh를 이용한 포워딩
 ![servlet-forward-addHeader](https://user-images.githubusercontent.com/43199318/87244797-f09b8680-c47a-11ea-905d-0297999d181f.png)
 1. 클라이언트의 웹 브라우저에서 첫 번째 서블릿에 요청한다.
 2. 첫 번째 서블릿은 addHeader() 메서드를 이용해 두 번째 서블릿을 웹 브라우저를 통해서 요청한다.
@@ -93,7 +93,7 @@ public class FirstServlet extends HttpServlet {
 }
 ```
 
-- Location을 이용한 포워딩
+Location을 이용한 포워딩
 
 FirstServlet.java
 ```java
@@ -119,7 +119,7 @@ public class FirstServlet extends HttpServlet {
 }
 ```
 
-- Dispatch를 이용한 포워딩<br>
+Dispatch를 이용한 포워딩<br>
 dispatch를 이용한 포워딩 과정이 redirect 방법과 다른 점은 클라이언트의 웹 브라우저를 거치지 않고 바로 서버에서 포워딩이 진행된다는 것이다. 따라서 **웹 브라우저 주소창의 URL이 변경되지 않는다**. 즉, 클라이언트 측에서는 포워드가 진행되었는지 알 수 없다.
 ![servlet-forward-dispatch](https://user-images.githubusercontent.com/43199318/87245145-0a8a9880-c47e-11ea-978e-176b4eb24818.png)
 1. 클라이언트의 웹 브라우저에서 첫 번째 서블릿에 요청한다.
@@ -206,8 +206,10 @@ public class SecondServlet extends HttpServlet {
         out.println("</body></html>");
     }
 }
-
 ```
+
+ 
+
 
 <br>
 ------------------------------------------------------------------------------
