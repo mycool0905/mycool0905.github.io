@@ -93,6 +93,8 @@ public class FirstServlet extends HttpServlet {
 ```
 
 - Location을 이용한 포워딩
+
+FirstServlet.java
 ```java
 @WebServlet("/first")
 public class FirstServlet extends HttpServlet {
@@ -116,6 +118,94 @@ public class FirstServlet extends HttpServlet {
 }
 ```
 
+- Dispatch를 이용한 포워딩<br>
+dispatch를 이용한 포워딩 과정이 redirect 방법과 다른 점은 클라이언트의 웹 브라우저를 거치지 않고 바로 서버에서 포워딩이 진행된다는 것이다. 따라서 **웹 브라우저 주소창의 URL이 변경되지 않는다**. 즉, 클라이언트 측에서는 포워드가 진행되었는지 알 수 없다.
+![servlet-forward-dispatch](https://user-images.githubusercontent.com/43199318/87245145-0a8a9880-c47e-11ea-978e-176b4eb24818.png)
+1. 클라이언트의 웹 브라우저에서 첫 번째 서블릿에 요청한다.
+2. 첫 번째 서블릿은 RequestDispatcher를 이용해 두 번째 서블릿으로 포워드한다.<br>
+(Dispatch 방법은 모델2 방식이나 Spring 프레임워크에서 포워딩할 때 사용한다.)
+
+FirstServlet.java
+```java
+@WebServlet("/first")
+public class FirstServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException{
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=utf-8");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("second");
+        dispatcher.forward(request,response);
+
+        /* 이 때, dispatch를 이용해서 GET 방식으로 데이터를 전송할 수도 있다. */
+        /* 예 : request.getRequestDispatcher("second?id=mycool0905"); */
+        /* 대신에 Dispatcher를 이용하여 서버에서 이루어지므로 브라우저의 URL에서 변화는 없다. */
+    }
+}
+```
+
+# 서블릿의 바인딩 기능
+- 바인딩(binding) : 서블릿에서 다른 서블릿 또는 JSP로 대량의 데이터를 공유하거나 전달하고 싶을 때 사용하는 기능(GET 방식X)<br>
+웹 프로그램 실행 시 데이터를 서블릿 관련 객체에 저장하는 방법으로, 주로 HttpServletRequest, HttpSession, ServletContext 객체에서 사용되며 저장된 데이터는 프로그램 실행 시 서블릿이나 JSP에서 공유하여 사용한다.
+
+- 바인딩 관련 메서드
+    + setAttribute(String name, Object obj)
+        * 데이터를 각 객체에 바인딩한다.
+    + getAttribute(String name)
+        * 각 객체에 바인딩된 데이터를 name으로 가져온다.
+    + removeAttribute(String name)
+        * 각 객체에 바인딩된 데이터를 name으로 제거한다.
+        
+HttpServletRequest를 이용하여 바인딩을 할 때, redirect 포워딩은 안된다. 왜냐? 처음 받은 request와 redirect 후에 다른 서블릿으로 보내진 request는 다르기 때문이다.<br>
+데이터가 양이 적거나 보안이 상관없으면 GET 방식도 괜찮다. 그러나 그렇지 않으면, redirect를 사용하지 말고 dispatch를 이용하여 포워딩 하자.
+
+FirstServlet.java
+```java
+@WebServlet("/first")
+public class FirstServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException{
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=utf-8");
+
+        /* request에 데이터 바인딩 */
+        request.setAttribute("id", "mycool0905");
+
+        /* 바인딩된 reqeust를 second 서블릿으로 포워드 */
+        RequestDispatcher dispatcher = request.getRequestDispatcher("second");
+        dispatcher.forward(request, response);
+    }
+}
+```
+
+SecondServlet.java
+```java
+@WebServlet("/second")
+public class SecondServlet extends HttpServlet {
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException{
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=utf-8");
+        PrintWriter out = response.getWriter();
+        
+        /* 전달 받은 request에서 getAttribute()를 이용해 id의 값을 받아온다.*/
+        /* 이 때, request.getAttribute의 리턴은 Object 형태이다.*/
+        /* 그래서 아래와 같이 type casting이 필요하다. */
+        String id=(String)request.getAttribute("id");
+
+        out.println("<html><body>");
+        out.println("아이디:"+id);
+        out.println("<br>");
+        out.println("</body></html>");
+    }
+}
+
+```
 
 <br>
 ------------------------------------------------------------------------------
