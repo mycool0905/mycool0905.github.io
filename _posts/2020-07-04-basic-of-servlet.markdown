@@ -7,6 +7,7 @@ tags: [Web, JSP, Servlet, Java]
 ---
 
 # 서블릿의 세 가지 기본 기능
+
    ![servlet-basic-function](https://user-images.githubusercontent.com/43199318/86510467-c880a780-be2a-11ea-9847-bcc20fa0c564.png)
    <br>
    1. 클라이언트로부터 요청 받기
@@ -14,6 +15,7 @@ tags: [Web, JSP, Servlet, Java]
    3. 처리된 결과를 클라이언트에게 보내기
    
 # 서블릿 요청과 응답 API
+
    - 요청과 관련된 API : javax.servlet.http.HttpServletRequest 클래스
    - 응답과 관련된 API : javax.servlet.http.HttpServletResponse 클래스
    
@@ -115,6 +117,7 @@ public class LoginServlet extends HttpServlet{
 <br><br>
 
 #서블릿의 응답 처리 방법
+
 1. doGet()이나 doPost() 메서드 안에서 처리
 2. javax.servlet.http.HttpServletResponse 객체를 이용
 3. setContentType()을 이용해 클라이언트에게 전송할 데이터 종류( [MIME-TYPE](https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types) )를 지정
@@ -150,6 +153,7 @@ public class ResponseServlet extends HttpServlet{
 ```
 
 #웹 브라우저에서 서블릿으로 데이터 전송
+
 - GET/POST 전송 방식
     + **GET**
         * 서블릿에 데이터를 전송할 때는 데이터가 URL 뒤에 name=value 형태로 전송된다.

@@ -7,6 +7,7 @@ tags: [Web, JSP, Servlet, Java]
 ---
 
 # 서블릿 비즈니스 처리 작업
+
 서블릿이 클라이언트로부터 요청을 받으면 그 요청에 대해 작업을 수행하는 것을 의미한다.
 
 ![servlet-basic-function](https://user-images.githubusercontent.com/43199318/86510467-c880a780-be2a-11ea-9847-bcc20fa0c564.png)
@@ -221,7 +222,8 @@ public class MemberDAO {
 }
 ```  
 
-#DataSource를 이용하여 데이터베이스 연동하기
+# DataSource를 이용하여 데이터베이스 연동하기
+
 웹 애플리케이션이 필요할 때마다 데이터베이스에 연결하여 작업하는 방식은 연결에 시간이 많이 걸린다는 것이다. 이 문제를 해결하기 위해 웹 애플리케이션이 실행됨과 동시에 연동할 데이터베이스와의 연결을 미리 설정해준다. 그리고 필요할 때마다 미리 연결해 놓은 상태를 이용해 빠르게 데이터베이스와 연동하여 작업을 한다. 이렇게 미리 데이터베이스와 연결시킨 상태를 유지하는 기술을 **커넥션풀(ConnectionPool)** 이라고 한다.
 
 ![connection-pool](https://user-images.githubusercontent.com/43199318/87103248-7529b180-c28f-11ea-9ec7-6f95c52456ec.png)

@@ -7,6 +7,7 @@ tags: [Web, JSP, Servlet, Java]
 ---
 
 # 서블릿의 포워드 기능
+
 - 포워드(forward) : 하나의 서블릿에서 다른 서블릿이나 JSP와 연동하는 방법
     + 요청에 대한 추가 작업을 다른 서블릿에게 수행하게 한다.
     + 요청(request)에 포함된 정보를 다른 서블릿이나 JSP와 공유할 수 있다.
@@ -146,6 +147,7 @@ public class FirstServlet extends HttpServlet {
 ```
 
 # 서블릿의 바인딩 기능
+
 - 바인딩(binding) : 서블릿에서 다른 서블릿 또는 JSP로 대량의 데이터를 공유하거나 전달하고 싶을 때 사용하는 기능(GET 방식X)<br>
 웹 프로그램 실행 시 데이터를 서블릿 관련 객체에 저장하는 방법으로, 주로 HttpServletRequest, HttpSession, ServletContext 객체에서 사용되며 저장된 데이터는 프로그램 실행 시 서블릿이나 JSP에서 공유하여 사용한다.
 

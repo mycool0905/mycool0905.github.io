@@ -7,6 +7,7 @@ tags: [Web, JSP, Servlet, Java]
 ---
 
 # 웹 프로그래밍의 기본
+
    - 웹 프로그래밍의 여러 가지 구성 요소
         + **웹 서버** : 각 클라이언트에게 서비스를 제공하는 컴퓨터
         + **클라이언트** : 네트워크로 서버에 접속한 후 서버로부터 서비스를 제공받는 컴퓨터를 의미
@@ -18,6 +19,7 @@ tags: [Web, JSP, Servlet, Java]
         
      
 # 정적 웹 프로그래밍(static web programming)
+
 ![static_web](https://user-images.githubusercontent.com/43199318/86431241-3c3d8a00-bd2f-11ea-9041-933c45cc31c1.png "정적 웹")
    - 아파치(Apache) 같은 웹 서버를 이용해서 웹 페이지들을 브라우저에 표시하는 방식.
    - 정적 웹 프로그래밍은 웹 서버에 미리 보여줄 HTML 페이지, CSS, 이미지, javascript 파일을 저장해 놓고
@@ -29,6 +31,7 @@ tags: [Web, JSP, Servlet, Java]
         
         
 # 동적 웹 프로그래밍(dynamic web programming)
+
 ![dynamic_web](https://user-images.githubusercontent.com/43199318/86431206-1d3ef800-bd2f-11ea-815b-db0b3e6e7351.png "동적 웹")
    - 정적 웹 프로그래밍에서 관리자가 HTML 소스를 직접 수정했어야 했는데, 이것을 웹 애플리케이션 서버가 수행하도록 한 것이다.
    - 따라서 데이터베이스에 정보를 저장해놓고, 클라이언트의 요청이 있을 때마다 데이터베이스에 접근하여 실시간 정보를 클라이언트에게 제공할 수 있다.
@@ -44,6 +47,7 @@ tags: [Web, JSP, Servlet, Java]
    
       
 # JSP 프로그램의 특징
+
    - JSP는 기본적으로 **스레드(Thread)** 방식으로 실행한다. 그래서 CGI 방식보다는 효율적으로 기능을 수행할 수 있다.
    - 어떤 기능을 수행할 때, 해당 기능에 대한 내용이 이미 메모리에 있다면 로드 과정이 생략되기 때문에 CGI 프로그램보다 훨씬 빠르게 동작한다.
    - JSP의 특징
