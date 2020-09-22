@@ -26,6 +26,7 @@ HTTP 프로토콜 방식으로 통신하는 웹 페이지들은 서로 어떤 �
     
 hidden 태그와 GET 방식으로 웹 페이지들을 연동하는 방법은 웹 페이지 사이에 보안상으로 취약하고 GET 방식을 이용하기 때문에 데이터 용량에도 한계가 있다.
 따라서, 이 방식은 간단한 정보 정보를 공유할 때만 사용하는 것이 좋다.
+<br>
 
 # 쿠키(Cookie)
 
@@ -58,7 +59,7 @@ hidden 태그와 GET 방식으로 웹 페이지들을 연동하는 방법은 웹
 4. 브라우저는 서버로부터 받은 쿠키 정보를 쿠키 파일에 저장한다.
 5. 브라우저가 다시 접속해 서버가 브라우저에게 쿠키 전송을 요청하면 브라우저는 쿠키 정보를 서버에 넘겨준다.
 6. 서버는 쿠키 정보를 이용해 작업을 한다.
-
+<br>
 
 - 쿠키 API
 <br>
@@ -93,6 +94,7 @@ hidden 태그와 GET 방식으로 웹 페이지들을 연동하는 방법은 웹
 쿠키 생성 시 setMaxAge() 메서드 인자 값의 종류를 지정해서 파일에 저장하는 Persistence 쿠키를 만들거나 메모리에만 저장하는 Session 쿠키를 만들 수 있다. 즉, setMaxAge() 메서드를 이용한 쿠키 저장 방식은 다음 두 가지로 나눌 수 있다.
 1. 인자 값으로 음수나 setMaxAge() 메서드를 사용하지 않고 쿠키를 만들면 Session 쿠키로 저장된다.
 2. 인자 값으로 양수를 지정하면 Persistence 쿠키로 저장된다.
+<br>
 
 SetCookieValue.java
 ```java
@@ -139,6 +141,7 @@ public class GetCookieValue extends HttpServlet {
     }
 }
 ```
+<br>
 
 # 세션(Session)
 
@@ -175,7 +178,7 @@ public class GetCookieValue extends HttpServlet {
 4. 브라우저는 서버로부터 받은 세션 id를 브라우저가 사용하는 메모리의 세션 쿠키에 저장한다(쿠키 이름은 jsessionId).
 5. 브라우저가 재접속하면 브라우저는 세션 쿠키에 저장된 세션 id를 서버에 전달한다.
 6. 서버는 전송된 세션 id를 이용해 해당 세션에 접근하여 작업을 수행한다.
-
+<br>
 
 - 세션 API
 <br>
@@ -211,6 +214,7 @@ HttpSession 객체는 HttpServletRequest의 getSession() 메서드를 호출해�
     + void setMaxInactiveInterval(int interval)
         * 세션을 유지하기 위한 세션 유지 시간을 초 단위로 설정한다.
         
+<br>
 
 SessionTest.java
 ```java
@@ -236,6 +240,7 @@ public class SessionTest extends HttpServlet {
     }
 }
 ```
+<br>
 
 세션은 클라이언트의 세션 쿠키를 이용한다. 그런데 만약 브라우저에서 쿠키 기능을 사용할 수 없게 설정했다면 쿠키 기능은 물론 세션 기능도 사용할 수 없다.
 이럴 때는 response 객체의 encodeURL() 메서드를 이용해 직접 서버에서 브라우저로 응답을 먼저 보낸 후 URL Rewriting 방법을 이용해 jsessionId를 서버로 전송하여 세션 기능을 사용하면 된다.
