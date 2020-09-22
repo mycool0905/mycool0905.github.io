@@ -16,8 +16,8 @@ tags: [Web, JSP, Servlet, Java]
    
 # 서블릿 요청과 응답 API
 
-   - 요청과 관련된 API : javax.servlet.http.HttpServletRequest 클래스
-   - 응답과 관련된 API : javax.servlet.http.HttpServletResponse 클래스
+   - 요청과 관련된 API: javax.servlet.http.HttpServletRequest 클래스
+   - 응답과 관련된 API: javax.servlet.http.HttpServletResponse 클래스
    
    위의 그림에서 1번과정 처럼 클라이언트가 서블릿에 요청을 하면 먼저 톰캣 컨테이너가 받는다.
    그 다음에 요청이나 응답에 대한 HttpServletRequest 객체와 HttpServletResponse 객체를 만들고, 서블릿의 doGet()이나 doPost() 메서드를 호출하면서 이 객체들을 전달한다.
@@ -77,10 +77,10 @@ login.html
     </head>
     <body>
     <!--
-    name : <form> 태그의 이름
-    method : <form> 태그 안에서 데이터를 전송할 때 전송하는 방법을 지정(GET 또는 POST)
-    action : <form> 태그에서 데이터를 전송할 서블릿이나 JSP를 지정(서블릿으로 전송할 때에 매핑이름 사용)
-    enctype : <form> 태그에서 전송할 데이터의 encoding 타입을 지정(파일 업로드 시 multipart/form-data)          
+    name: <form> 태그의 이름
+    method: <form> 태그 안에서 데이터를 전송할 때 전송하는 방법을 지정(GET 또는 POST)
+    action: <form> 태그에서 데이터를 전송할 서블릿이나 JSP를 지정(서블릿으로 전송할 때에 매핑이름 사용)
+    enctype: <form> 태그에서 전송할 데이터의 encoding 타입을 지정(파일 업로드 시 multipart/form-data)          
      -->
         <form name="loginForm" method="get" action="login" enctype="UTF-8">
             아이디:<input type="text" name="user_id"><br>
@@ -142,8 +142,8 @@ public class ResponseServlet extends HttpServlet{
            너무 귀찮고, 복잡하다. 이를 해결하기 위해 JSP가 나왔다. */
         String output = "<html>";
         output += "<body>";
-        output += "아이디 : "+id;
-        output += "비밀번호 : "+pw;
+        output += "아이디: "+id;
+        output += "비밀번호: "+pw;
         output += "</body>";
         output += "</html>";
         
@@ -172,4 +172,4 @@ public class ResponseServlet extends HttpServlet{
         
 <br>
 ------------------------------------------------------------------------------
-참고 : [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")
+참고: [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")

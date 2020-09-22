@@ -8,7 +8,7 @@ tags: [Web, JSP, Servlet, Java]
 
 # 서블릿의 포워드 기능
 
-- 포워드(forward) : 하나의 서블릿에서 다른 서블릿이나 JSP와 연동하는 방법
+- 포워드(forward): 하나의 서블릿에서 다른 서블릿이나 JSP와 연동하는 방법
     + 요청에 대한 추가 작업을 다른 서블릿에게 수행하게 한다.
     + 요청(request)에 포함된 정보를 다른 서블릿이나 JSP와 공유할 수 있다.
     + 요청(request)에 정보를 포함시켜 다른 서블릿에 전달할 수 있다.
@@ -21,15 +21,15 @@ tags: [Web, JSP, Servlet, Java]
     + Redirect 방법
         * HttpServletResponse 객체의 sendRedirect() 메서드를 이용한다.
         * 웹 브라우저에 재요청하는 방식이다.
-        * 형식 : sendRedirect("포워드할 서블릿 또는 JSP");
+        * 형식: sendRedirect("포워드할 서블릿 또는 JSP");
     + Refresh 방법
         * HttpServletResponse 객체의 addHeader() 메서드를 이용한다.
         * 웹 브라우저에 재요청하는 방식이다.
-        * 형식 : response.addHeader("Refresh", 경과시간(초);url=요청할 서블릿 또는 JSP");
+        * 형식: response.addHeader("Refresh", 경과시간(초);url=요청할 서블릿 또는 JSP");
     + Location 방법
         * 자바스크립트 location 객체의 href 속성을 이용한다.
         * 자바스크립트에서 재요청하는 방식이다.
-        * 형식 : location.href='요청할 서블릿 또는 JSP';
+        * 형식: location.href='요청할 서블릿 또는 JSP';
     + Dispatch 방법
         * 일반적으로 포워딩 기능을 지칭한다.
         * 서블릿이 직접 요청하는 방법이다.
@@ -61,7 +61,7 @@ public class FirstServlet extends HttpServlet {
         response.sendRedirect("second");
 
         /* 이 때, URL을 재요청하는 것이라서 GET 방식을 이용해 데이터를 전달할 수도 있다. */
-        /* 예 : response.sendRedirect("second?id=mycool0905"); */
+        /* 예: response.sendRedirect("second?id=mycool0905"); */
     }
 }
 ```
@@ -88,7 +88,7 @@ public class FirstServlet extends HttpServlet {
         response.addHeader("Refresh","1;url=second");
 
         /* 이 때, URL을 재요청하는 것이라서 GET 방식을 이용해 데이터를 전달할 수도 있다. */
-        /* 예 : response.addHeader("Refresh", "1;url=second?id=mycool0905"); */
+        /* 예: response.addHeader("Refresh", "1;url=second?id=mycool0905"); */
     }
 }
 ```
@@ -114,7 +114,7 @@ public class FirstServlet extends HttpServlet {
         out.print("</script>");
 
         /* 이 때, URL을 재요청하는 것이라서 GET 방식을 이용해 데이터를 전달할 수도 있다. */
-        /* 예 : out.print("location.href='second?id=mycool0905';"); */
+        /* 예: out.print("location.href='second?id=mycool0905';"); */
     }
 }
 ```
@@ -140,7 +140,7 @@ public class FirstServlet extends HttpServlet {
         dispatcher.forward(request,response);
 
         /* 이 때, dispatch를 이용해서 GET 방식으로 데이터를 전송할 수도 있다. */
-        /* 예 : request.getRequestDispatcher("second?id=mycool0905"); */
+        /* 예: request.getRequestDispatcher("second?id=mycool0905"); */
         /* 대신에 Dispatcher를 이용하여 서버에서 이루어지므로 브라우저의 URL에서 변화는 없다. */
     }
 }
@@ -148,7 +148,7 @@ public class FirstServlet extends HttpServlet {
 
 # 서블릿의 바인딩 기능
 
-- 바인딩(binding) : 서블릿에서 다른 서블릿 또는 JSP로 대량의 데이터를 공유하거나 전달하고 싶을 때 사용하는 기능(GET 방식X)<br>
+- 바인딩(binding): 서블릿에서 다른 서블릿 또는 JSP로 대량의 데이터를 공유하거나 전달하고 싶을 때 사용하는 기능(GET 방식X)<br>
 웹 프로그램 실행 시 데이터를 서블릿 관련 객체에 저장하는 방법으로, 주로 HttpServletRequest, HttpSession, ServletContext 객체에서 사용되며 저장된 데이터는 프로그램 실행 시 서블릿이나 JSP에서 공유하여 사용한다.
 
 - 바인딩 관련 메서드
@@ -278,7 +278,7 @@ public class SetServletContext extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
 
         /* ServletContext 객체를 가져온다. */
-        /* getServletContext() : GenericServlet에 구현되어 있다. */
+        /* getServletContext(): GenericServlet에 구현되어 있다. */
         ServletContext context = getServletContext();
         List member = new ArrayList();
         member.add("mycool0905");
@@ -302,7 +302,7 @@ public class GetServletContext extends HttpServlet {
         response.setContentType("text/html;charset=utf-8");
 
         /* ServletContext 객체를 가져온다. */
-        /* getServletContext() : GenericServlet에 구현되어 있다. */
+        /* getServletContext(): GenericServlet에 구현되어 있다. */
         ServletContext context = getServletContext();
 
         /* Context에 "member"로 바인딩 된 회원 정보를 가져온다. */
@@ -551,4 +551,4 @@ web.xml
 
 <br>
 ------------------------------------------------------------------------------
-참고 : [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")
+참고: [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")

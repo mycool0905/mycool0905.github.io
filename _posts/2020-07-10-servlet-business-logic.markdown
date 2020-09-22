@@ -147,7 +147,7 @@ public class MemberServlet extends HttpServlet {
         List<MemberVO> list = dao.listMembers();
 
         /* Java Stream IO로 보내는 것 생략 */
-        for(MemberVO vo : list)
+        for(MemberVO vo: list)
             System.out.println(vo.getId() + " " +vo.getPwd() + " " +vo.getName() + " " +vo.getEmail() + " " +vo.getJoinDate());
     }
 }
@@ -253,17 +253,17 @@ context.xml에 Resource 설정
     maxWait="-1" />
 ```
 ConnectionPool로 연결할 데이터베이스 속성
-- name : DataSource에 대한 JNDI 이름
-- auth : 인증 주체
-- driverClassName : 연결할 데이터베이스 종류에 따른 드라이버 클래스 이름
-- factory : 연결할 데이터베이스 종류에 따른 ConnectionPool 생성 클래스 이름
-- maxActive : 동시에 최대로 데이터베이스에 연결할 수 있는 Connection 수
-- maxIdle : 동시에 idle 상태로 대기할 수 있는 최대 수
-- maxWait : 새로운 연결이 생길 때까지 기다릴 수 있는 최대 시간
-- username : 데이터베이스 접속 ID
-- password : 데이터베이스 접속 비밀번호
-- type : 데이터베이스 종류별 DataSource
-- url : 접속할 데이터베이스 주소와 포트 번호 및 SID
+- name: DataSource에 대한 JNDI 이름
+- auth: 인증 주체
+- driverClassName: 연결할 데이터베이스 종류에 따른 드라이버 클래스 이름
+- factory: 연결할 데이터베이스 종류에 따른 ConnectionPool 생성 클래스 이름
+- maxActive: 동시에 최대로 데이터베이스에 연결할 수 있는 Connection 수
+- maxIdle: 동시에 idle 상태로 대기할 수 있는 최대 수
+- maxWait: 새로운 연결이 생길 때까지 기다릴 수 있는 최대 시간
+- username: 데이터베이스 접속 ID
+- password: 데이터베이스 접속 비밀번호
+- type: 데이터베이스 종류별 DataSource
+- url: 접속할 데이터베이스 주소와 포트 번호 및 SID
 
 DataSource를 이용하여 데이터베이스와 연동하는 MemberDAO.java
 ```java
@@ -311,4 +311,4 @@ public class MemberDAO{
 
 <br>
 ------------------------------------------------------------------------------
-참고 : [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")
+참고: [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")

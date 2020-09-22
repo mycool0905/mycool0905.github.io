@@ -9,13 +9,13 @@ tags: [Web, JSP, Servlet, Java]
 # 웹 프로그래밍의 기본
 
    - 웹 프로그래밍의 여러 가지 구성 요소
-        + **웹 서버** : 각 클라이언트에게 서비스를 제공하는 컴퓨터
-        + **클라이언트** : 네트워크로 서버에 접속한 후 서버로부터 서비스를 제공받는 컴퓨터를 의미
-        + **HTTP 프로토콜** : Hyper Text Transfer Protocol의 약자로, www 서비스를 제공하는 통신 규약을 의미한다.
+        + **웹 서버**: 각 클라이언트에게 서비스를 제공하는 컴퓨터
+        + **클라이언트**: 네트워크로 서버에 접속한 후 서버로부터 서비스를 제공받는 컴퓨터를 의미
+        + **HTTP 프로토콜**: Hyper Text Transfer Protocol의 약자로, www 서비스를 제공하는 통신 규약을 의미한다.
         웹 서버와 클라이언트는 이 프로토콜을 이용해 정보를 주고받는다.
-        + **HTML** : Hyper Text Markup Language의 약자로, www 서비스를 제공하기 위한 표준 언어
-        + **Javascript** : HTML 웹 페이지의 여러 가지 동적인 기능을 제공하는 스크립트 언어
-        + **CSS(Style Sheet)** : HTML 문서에서 서체나 색상, 정렬 등 세부적인 HTML 페이지의 디자인에 관련된 여러 가지 기능을 제공한다.   
+        + **HTML**: Hyper Text Markup Language의 약자로, www 서비스를 제공하기 위한 표준 언어
+        + **Javascript**: HTML 웹 페이지의 여러 가지 동적인 기능을 제공하는 스크립트 언어
+        + **CSS(Style Sheet)**: HTML 문서에서 서체나 색상, 정렬 등 세부적인 HTML 페이지의 디자인에 관련된 여러 가지 기능을 제공한다.   
         
      
 # 정적 웹 프로그래밍(static web programming)
@@ -57,4 +57,4 @@ tags: [Web, JSP, Servlet, Java]
         
 <br>
 ------------------------------------------------------------------------------
-참고 : [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")
+참고: [자바 웹을 다루는 기술](https://book.naver.com/bookdb/book_detail.nhn?bid=14439459 "자바 웹을 다루는 기술")
