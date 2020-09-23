@@ -186,6 +186,7 @@ public class LoginTest extends HttpServlet {
 ```
 
 위 코드로 한글로 로그인을 해봤다.
+
 ![로그인테스트1](https://user-images.githubusercontent.com/43199318/93968371-6b9aea80-fda4-11ea-970b-3eac71ff4252.JPG)
 ![로그인테스트2](https://user-images.githubusercontent.com/43199318/93968375-6d64ae00-fda4-11ea-9241-f9aa8ba0b1b0.JPG)
 
@@ -235,6 +236,7 @@ public class EncoderFilter implements Filter {
 ```
 
 결과는 아래와 같이 한글이 안깨지고 잘 나온다.
+
 ![로그인테스트3](https://user-images.githubusercontent.com/43199318/93968380-6e95db00-fda4-11ea-8e0e-e16ebe2a6885.JPG)
 
 
