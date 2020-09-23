@@ -114,6 +114,7 @@ URL 패턴이란 실제 서블릿의 매핑 이름을 말한다.
 
 
 필터 기능 수행 과정
+
 ![필터 기능 수행 과정](https://user-images.githubusercontent.com/43199318/93966415-a5b5bd80-fd9f-11ea-97c0-8968239d0de6.png)
 <br><br>
 ```java
@@ -188,6 +189,7 @@ public class LoginTest extends HttpServlet {
 위 코드로 한글로 로그인을 해봤다.
 
 ![로그인테스트1](https://user-images.githubusercontent.com/43199318/93968371-6b9aea80-fda4-11ea-970b-3eac71ff4252.JPG)
+
 ![로그인테스트2](https://user-images.githubusercontent.com/43199318/93968375-6d64ae00-fda4-11ea-9241-f9aa8ba0b1b0.JPG)
 
 위 결과와 같이 한글이 깨져서 표시된다.
