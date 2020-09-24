@@ -5,6 +5,13 @@ description: > # this means to ignore newlines until "show_exerpts:"
   코딩을 잘하고 싶은 청년의 블로그
 show_excerpts: true # set to true to show excerpts on the homepage
 
+# Google analytics
+analytics:
+  provider: "google"
+  google:
+    tracking_id: UA-178880198-1
+    anonymize_ip: false # default
+
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
