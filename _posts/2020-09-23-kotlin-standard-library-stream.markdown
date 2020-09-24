@@ -56,6 +56,21 @@ fun main(args: Array<String>) {
 
 <br>
 
+- flatMap()
+    + flatMap()은 map() 함수와 비슷하지만 하나의 인자에서 여러 개의 인자로 매핑이 필요할 때 사용한다.
+
+```kotlin
+fun main(args: Array<String>){
+    val numbers = 1..5
+
+    numbers.flatMap{ number -> number..number+1}
+            .forEach { println(it) }
+    // 1 2 2 3 3 4 4 5 5 6
+}
+```
+
+<br>
+
 - groupBy()
     + 컬렉션 내 인자들을 지정한 기준에 따라 분류하여 맵 형태로 결과를 반환한다.
     
