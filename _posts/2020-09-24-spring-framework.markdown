@@ -44,6 +44,7 @@ tags: [Web, Spring, Java]
 |AOP|관점 지향 기능을 제공한다.|
 |Web|웹 애플리케이션 개발에 필요한 기능을 제공한다.|
 |WebMVC|스프링에서 MVC 구현에 관련된 기능을 제공한다.|
+
 <br>
 
 # 의존성 주입(DI)
@@ -57,6 +58,7 @@ tags: [Web, Spring, Java]
 ```text
 관련이 있는 기능들은 강하게 결합(tightly coupled)하고, 관련이 없는 기능들은 약하게 결합(loosely coupled)해야 좋은 프로그램이다.
 ```
+
 <br>
 
 # 관점 지향 프로그래밍(AOP) 
@@ -76,6 +78,7 @@ AOP를 사용하면 전체 코드에 흩어져 있는 보조 기능을 하나의
 |pointcut|advice가 적용되는 대상을 지정한다. 패키지이름/클래스이름/메서드이름을 정규식으로 지정하여 사용한다.|
 |target|advice가 적용되는 클래스를 의미한다.|
 |weaving|advice를 주 기능에 적용하는 것을 의미한다.|
+
 <br><br>
 
 AOP 기능을 구현하는 과정
