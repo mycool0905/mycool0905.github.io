@@ -44,6 +44,7 @@ tags: [Web, Spring, Java]
 |AOP|관점 지향 기능을 제공한다.|
 |Web|웹 애플리케이션 개발에 필요한 기능을 제공한다.|
 |WebMVC|스프링에서 MVC 구현에 관련된 기능을 제공한다.|
+<br>
 
 # 의존성 주입(DI)
 
@@ -56,6 +57,7 @@ tags: [Web, Spring, Java]
 ```text
 관련이 있는 기능들은 강하게 결합(tightly coupled)하고, 관련이 없는 기능들은 약하게 결합(loosely coupled)해야 좋은 프로그램이다.
 ```
+<br>
 
 # 관점 지향 프로그래밍(AOP) 
 
