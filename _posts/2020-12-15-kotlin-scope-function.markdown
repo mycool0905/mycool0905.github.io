@@ -102,7 +102,7 @@ val member = run {
 
 - `with` 함수는 확장 함수가 아니기 때문에 context object를 argument로 전달한다. 그러나, 람다의 내부에는 확장함수로 적용되어서 `this`로 사용가능하다.
 - `with` 함수는 반환 결과가 람다의 결과이다.
-- `with` 함수는 수신 객체는 Non-nullable 이고, 결과가 필요하지 않은 경우에 유용하다.
+- `with` 함수는 수신 객체는 non-nullable이고, 결과가 필요하지 않은 경우에 유용하다.
         
 ```kotlin
 val member = Member("Wangi", 26)
