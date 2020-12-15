@@ -182,7 +182,8 @@ val length = str?.let {
 위의 스코프 함수들은 새로운 기술이 아니라, 코드들을 더욱 간결하고 가독성 좋게 하자는 의도로 사용한다.
 그러므로 각 함수의 용도와 컨벤션을 잘 정하여 사용하는 것이 중요할 것 같다.
 
-마지막으로, 코틀린 도큐먼트에서 추천하는 가이드를 보면서 이 포스팅을 마무리 하겠다.
+마지막으로, 코틀린 도큐먼트에서 제공하는 *Scope Function Selection Guide*를 보면서 이 포스팅을 마무리 하겠다.
+
 ![Kotlin Scope Function Guide](https://user-images.githubusercontent.com/43199318/102169642-f982ff00-3ed5-11eb-8b4b-c70c603e8979.png)
 
 <br>
