@@ -198,7 +198,7 @@ fun main(args: Array<String>) {
 
     cities.distinctBy { it.length }
             .forEach { println(it) }
-    // Seouln, London
+    // Seoul, London
 }
 ```
 
